@@ -1,0 +1,714 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #3E3535;
+}
+
+.button {
+    text-decoration: none;
+    color:#8D0000;
+    background-color: white;
+    font-family: poppins;
+    font-size: 30px;
+    padding: 10px 20px;
+    border: solid grey 2px;
+    margin: 0 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.button:hover {
+    color: white;
+    background-color: #8D0000;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ------------------------------------------------------ INDEX --------------------------------------------------------- */
+
+header {
+    background-color: #8D0000;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid white 1px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header #headerContenu {
+    display: flex;
+    align-items: center;
+}
+
+#headerContenu .button {
+    margin-left: 60px;
+    width: 250px;
+    cursor: pointer;
+}
+
+header #bonjourPseudo {
+    color: white;
+    font-size: 30px;
+    font-family: poppins;
+}
+
+header h1 {
+    color: white;
+    font-size: 30px;
+    font-family: poppins;
+    margin-left: 25px;
+}
+
+#nonCo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#nonCo h2 {
+    color: white;
+    font-family: poppins;
+    font-size: 68px;
+    margin-top: 25px;
+}
+
+#nonCo p {
+    color: white;
+    font-family: poppins;
+    font-size: 30px;
+    width: 50%;
+    text-align: center;
+    margin-top: 75px;
+}
+
+#nonCo div {
+    margin-top: 50px;
+}
+
+#indexContenu {
+    display: flex;
+    justify-content: space-around;
+}
+
+#left {
+    background-color: white;
+    width: 75%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 25px;
+}
+
+#left h2 {
+    font-size: 30px;
+    color: #8D0000;
+    font-family: poppins;
+    margin-left: 10px;
+    margin-top: 25px;
+}
+
+#left ul li {
+    display: flex;
+    font-size: 20px;
+    font-family: poppins;
+    list-style: none;
+    margin-left: 30px;
+}
+
+#left ul li a {
+    text-decoration: none;
+    color: black;
+}
+#left ul li a:hover {
+    color: grey;
+}
+
+#left ul li a:first-child {
+    margin-right: 150px;
+}
+
+#left #bas {
+    display: flex;
+    justify-content: space-between;
+}
+
+#basLeft {
+    width: 50%;
+}
+
+#basRight {
+    width: 50%;
+}
+
+#right {
+    background-color: white;
+    width: 18%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+#right h2 {
+    margin: 10px auto 0 auto;
+    font-family: poppins;
+    font-size: 30px;
+    color: #8D0000;
+}
+
+#right hr {
+    width: 70%;
+    margin: 10px auto 0 auto;
+    background-color: #8D0000;
+    height: 1px;
+}
+
+#right p {
+    margin: 10px 0 0 25px;
+    font-family: poppins;
+    font-size: 20px;
+}
+
+#right div {
+    margin-left: 30px;
+    margin-top: 10px;
+    display: flex;
+}
+
+#right div img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.enligne {
+    color: #8D0000;
+}
+
+.deco {
+    color: grey;
+}
+
+#ajoutAmis {
+    color: #90A158;
+    font-size: 30px;
+    font-family: poppins;
+    text-decoration: none;
+    text-align: center;
+    border: solid black 1px;
+    padding: 0 10px;
+}
+
+#ajoutAmis:hover {
+    color: white;
+    background-color: #90A158;
+}
+
+footer {
+    height: 200px;
+    background-color: #8D0000;
+    margin-top: 50px;
+}
+
+.ecart {
+    width: 600px;
+}
+
+/* ------------------------------------------------------ CONNEXION --------------------------------------------------------- */
+
+#connexion {
+    display: flex;
+    justify-content: center;
+}
+
+#connexionContenu {
+    background-color: white;
+    width: 40%;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+#connexionContenu h2 {
+    font-size: 68px;
+    font-family: poppins;
+    margin: auto;
+}
+
+#connexionContenu form {
+    margin: auto;
+}
+
+#connexionContenu form div {
+    display: flex;
+    flex-direction: column;
+    font-family: poppins;
+    margin-top: 20px;
+}
+
+#connexionContenu form label {
+    font-size: 30px;
+}
+
+#connexionContenu form input {
+    width: 580px;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 25px;
+}
+
+#connexionContenu p {
+    font-family: poppins;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#connexionContenu p a {
+    color: #8D0000;
+}
+
+#connexionContenu .button {
+    margin: auto;
+    margin-top: 30px;
+    width: 200px;
+}
+
+/* ------------------------------------------------------ INSCRIPTION --------------------------------------------------------- */
+
+#inscription {
+    display: flex;
+    justify-content: center;
+}
+
+#inscriptionContenu {
+    background-color: white;
+    width: 40%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+#inscriptionContenu h2 {
+    font-size: 68px;
+    font-family: poppins;
+    margin: auto;
+}
+
+#inscriptionContenu form {
+    margin: auto;
+}
+
+#inscriptionContenu form div {
+    display: flex;
+    flex-direction: column;
+    font-family: poppins;
+    margin-top: 20px;
+}
+
+#inscriptionContenu form label {
+    font-size: 30px;
+}
+
+#inscriptionContenu form input {
+    width: 580px;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 25px;
+}
+
+#inscriptionContenu p {
+    font-family: poppins;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#inscriptionContenu p a {
+    color: #8D0000;
+}
+
+#inscriptionContenu form .button {
+    margin: auto;
+    margin-top: 30px;
+    width: 200px;
+}
+
+/* ------------------------------------------------------ CREATION TOURNOI --------------------------------------------------------- */
+
+#creationContenu {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 50%;
+    margin: 25px auto 0 auto;
+    font-family: poppins;
+    padding-bottom: 25px;
+}
+
+#creationContenu h2 {
+    color: #8D0000;
+    font-size: 60px;
+    margin: 0 auto;
+}
+
+#creationContenu div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+#creationContenu div label {
+    font-size: 25px;
+    margin-left: 25px;
+}
+
+#creationContenu div input, #creationContenu div select {
+    height: 45px;
+    width: 80%;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#creationContenu .button {
+    width: 50%;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------ PAGE SONDAGE --------------------------------------------------------- */
+
+#contenuSondage {
+    display: flex;
+    justify-content: space-around;
+}
+
+#leftSondage {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 75%;
+    height: 700px;
+    margin-top: 60px;
+}
+
+#leftSondage h2 {
+    margin: 0 auto;
+    font-size: 60px;
+    font-family: poppins;
+    padding-bottom: 50px;
+}
+
+.reponsesSondage {
+    width: 73%;
+    margin-top: 25px;
+    height: 43px;
+    text-align: left;
+    padding: 0 0 0 2%;
+    font-family: poppins;
+    font-size: 20px;
+    margin: 25px auto 0 auto;
+}
+
+#leftSondage form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reponsesSondage form:last-child {
+    width: 50%;
+    margin-top: 0;
+}
+
+#leftSondage h3 {
+    font-size: 30px;
+    font-family: poppins;
+    margin: 50px auto 0 auto;
+}
+
+#rightSondage {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin-top: 60px;
+    justify-content: space-between;
+}
+
+#rightSondage h2 {
+    font-size: 30px;
+    font-family: poppins;
+    color: #8D0000;
+    margin: 25px auto 0 auto;
+}
+
+#envoyerMessage {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#envoyerMessage input {
+    height: 30px;
+    padding: 0 20px;
+    margin-right: 5px;
+}
+
+#messageChat {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#messageChat span {
+    color: #8D0000;
+}
+
+#messageChat p {
+    font-size: 15px;
+    font-family: poppins;
+    margin-left: 2%;
+    width: 90%;
+    word-break: break-all;
+}
+
+.reponsesSondageFini:first-child {
+    background-image: url(../img/rouge.jpg);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    width: 73%;
+    margin-top: 25px;
+    height: 43px;
+    text-align: left;
+    padding: 0 0 0 2%;
+    font-family: poppins;
+    font-size: 20px;
+    margin: 25px auto 0 auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    border: black solid 1px;
+}
+
+.reponsesSondageFini:nth-child(2) {
+    background-image: url(../img/rouge.jpg);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    width: 73%;
+    margin-top: 25px;
+    height: 43px;
+    text-align: left;
+    padding: 0 0 0 2%;
+    font-family: poppins;
+    font-size: 20px;
+    margin: 25px auto 0 auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    border: black solid 1px;
+}
+
+.reponsesSondageFini:nth-child(3) {
+    background-image: url(../img/rouge.jpg);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    width: 73%;
+    margin-top: 25px;
+    height: 43px;
+    text-align: left;
+    padding: 0 0 0 2%;
+    font-family: poppins;
+    font-size: 20px;
+    margin: 25px auto 0 auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    border: black solid 1px;
+}
+
+.reponsesSondageFini:nth-child(4) {
+    background-image: url(../img/rouge.jpg);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    width: 73%;
+    margin-top: 25px;
+    height: 43px;
+    text-align: left;
+    padding: 0 0 0 2%;
+    font-family: poppins;
+    font-size: 20px;
+    margin: 25px auto 0 auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    border: black solid 1px;
+}
+
+/* ------------------------------------------------------ PAGE PROFIL --------------------------------------------------------- */
+
+#contenuProfil {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 60%;
+    margin: 50px auto 0 auto;
+    padding-bottom: 50px;
+}
+
+#headerProfil {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#headerProfil img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+#headerProfil {
+    font-family: poppins;
+    font-size: 70px;
+    color: #8D0000;
+}
+
+#contenuProfil hr {
+    width: 80%;
+    border: none;
+    height: 2px;
+    background-color: #8D0000;
+    margin: 25px auto 0 auto;
+}
+
+#contenuProfil p {
+    font-family: poppins;
+    font-size: 25px;
+    color: #8D0000;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+#contenuProfil a {
+    margin: 40px auto 0 auto;
+}
+
+/* ------------------------------------------------------ PAGE AMIS --------------------------------------------------------- */
+
+#amis {
+    display: flex;
+    justify-content: space-around;
+}
+
+#amisLeft {
+    background-color: white;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    margin-top: 40px;
+}
+
+#amisLeft h2 {
+    font-size: 50px;
+    font-family: poppins;
+    text-align: center;
+}
+
+#amisLeft .rechercheAmis {
+    width: 80%;
+    margin: 25px auto 0 auto;
+    font-size: 25px;
+    height: 40px;
+    padding: 0 10px;
+}
+
+#amisLeft form {
+    display: flex;
+    align-items: center;
+    margin-right: 2%;
+}
+
+.listeAmis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px
+}
+
+.listeAmis p {
+    font-size: 25px;
+    margin-left: 10px;
+    font-family: poppins;
+}
+
+.listeAmis div {
+    display: flex;
+    align-items: center;
+    margin-left: 20px
+}
+
+.listeAmis img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+#amisRight {
+    background-color: white;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+#amisRight h2 {
+    font-size: 50px;
+    font-family: poppins;
+    text-align: center;
+}
+
+#amisRight .rechercheAmis {
+    width: 80%;
+    margin: 25px auto 0 auto;
+    font-size: 25px;
+    height: 40px;
+    padding: 0 10px;
+}
+
+#amisRight .listeAmis input {
+    color: #90A158;
+    align-self: flex-end;
+}
+
+#amisRight .listeAmis input:hover {
+    color: white;
+    background-color: #90A158;
+}
+
+#amisRight form {
+    display: flex;
+    align-items: center;
+    margin-right: 2%;
+}
+
+.searchButton {
+    width: 100px;
+    height: 40px;
+    margin-top: 25px;
+}
