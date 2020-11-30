@@ -1,6 +1,7 @@
 <?php
     session_start();
-    $bdd = new PDO("mysql:host=localhost;dbname=exo_sondage;charset=utf8", "root", "");
+    include "codes.php";
+    $bdd = new PDO("mysql:host=localhost;dbname=exo_sondage;charset=utf8", $indivRoots, $indivMdp);
 
     $ajoutUsers = $bdd->prepare("INSERT INTO users(users_pseudo, users_mdp, users_email) VALUES(?, ?, ?);");
 
