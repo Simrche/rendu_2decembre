@@ -2,34 +2,35 @@
 include "coBdd.php";
 // Ajout de tournoi dans la bdd --------------------------------------------------------------
 
-$ajoutTournoi = $bdd->prepare("INSERT INTO sondage(sond_question, sond_lien, sond_time, sond_debut, sond_createur) VALUES(?, ?, ?, ?, ?);");
-$ajoutReponse = $bdd->prepare("INSERT INTO reponses(rep_name, rep_sondage_id) VALUES(?, ?);");
-$ajoutChat = $bdd->prepare("INSERT INTO chat(chat_sondage_id) VALUES(?);");
+use App\CreaSondController;
+$newSond = new CreaSondController($bdd);
+$newSond->creaNewSond($bdd);
 
-if (isset($_POST['envoyer'])) {
-    $lien = rand(0, 1000000000);
-    $ajoutTournoi->execute(array($_POST['titre'], $lien, intval($_POST['time']), time(), $_SESSION['pseudo']));
-    $ajoutReponse->execute(array($_POST['rep1'], $lien));
-    $ajoutReponse->execute(array($_POST['rep2'], $lien));
-    if ($_POST['rep3'] != "") {
-        $ajoutReponse->execute(array($_POST['rep3'], $lien));
-    }
-    if ($_POST['rep4'] != "") {
-        $ajoutReponse->execute(array($_POST['rep4'], $lien));
-    }
-    header('Location:index.php');
+// $ajoutTournoi = $bdd->prepare("INSERT INTO sondage(sond_question, sond_lien, sond_time, sond_debut, sond_createur) VALUES(?, ?, ?, ?, ?);");
+// $ajoutReponse = $bdd->prepare("INSERT INTO reponses(rep_name, rep_sondage_id) VALUES(?, ?);");
+// $ajoutChat = $bdd->prepare("INSERT INTO chat(chat_sondage_id) VALUES(?);");
 
-    // Création du chat pour le sondage -------------------------------------------------------------
+// if (isset($_POST['envoyer'])) {
+//     $lien = rand(0, 1000000000);
+//     $ajoutTournoi->execute(array($_POST['titre'], $lien, intval($_POST['time']), time(), $_SESSION['pseudo']));
+//     $ajoutReponse->execute(array($_POST['rep1'], $lien));
+//     $ajoutReponse->execute(array($_POST['rep2'], $lien));
+//     if ($_POST['rep3'] != "") {
+//         $ajoutReponse->execute(array($_POST['rep3'], $lien));
+//     }
+//     if ($_POST['rep4'] != "") {
+//         $ajoutReponse->execute(array($_POST['rep4'], $lien));
+//     }
+//     header('Location:index.php');
 
-    $ajoutChat->execute(array($lien));
-}
+//     // Création du chat pour le sondage -------------------------------------------------------------
+
+//     $ajoutChat->execute(array($lien));
+// }
 
 // Bouton deconnexion -------------------------------------------------------------------------
 
-if (isset($_POST['deco'])) {
-    session_destroy();
-    header('location:index.php');
-}
+include "../App/deconnexion.php";
 
 
 
