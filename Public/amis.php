@@ -11,8 +11,8 @@ if (isset($_POST['deco'])) {
 
 
 use App\FriendsControler;
-$friend = new FriendsControler();
-$allUser = $friend->getUsers();
+$friend = new FriendsControler($bdd);
+$allUser = $friend->getUsers($bdd);
 
 // $allUser = $bdd->prepare('SELECT users_pseudo, users_id FROM users WHERE users_pseudo != :pseudo ORDER BY users_pseudo ASC');
 // $allUser->execute(array('pseudo' => $_SESSION['pseudo']));

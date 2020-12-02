@@ -2,25 +2,16 @@
 
 namespace App;
 
-use CoBdd;
-
-
-class IndexControler extends CoBdd
+class IndexControler
 {
 
-    private $bd;
-    
-    public function __construct()
+    public function __construct($bdd)
     {
-
-        $bd = parent::__construct();
-        return $bd;
     }
 
 
-    public function sondNow()
+    public function sondNow($bdd)
     {
-        $bdd = $this->bd;
         $sondageEnCours =  $bdd->prepare('SELECT sond_question, sond_lien FROM sondage WHERE sond_createur=:pseudo AND sond_enCours = 1');
         if (isset($_SESSION['pseudo'])) {
             $sondageEnCours->execute(array('pseudo' => $_SESSION['pseudo']));

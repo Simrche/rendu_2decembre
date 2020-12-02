@@ -1,5 +1,5 @@
 <?php
-// include "coBdd.php";
+include "coBdd.php";
 // Bouton Deconnexion ------------------------------------------------------------------------------------------
 
 if (isset($_POST['deco'])) {
@@ -10,11 +10,8 @@ if (isset($_POST['deco'])) {
 // Affichage de mes sondages en cours --------------------------------------------------------------------------------------
 
 use App\IndexControler;
-use App\CoBdd;
-
-
-$bdd = new IndexControler();
-$sondageEnCours = $bdd->sondNow();
+$indeContr = new IndexControler($bdd);
+$sondageEnCours = $indeContr->sondNow($bdd);
 // $sondageEnCours =  $bdd->prepare('SELECT sond_question, sond_lien FROM sondage WHERE sond_createur=:pseudo AND sond_enCours = 1');
 // if (isset($_SESSION['pseudo'])) {
 //     $sondageEnCours->execute(array('pseudo' => $_SESSION['pseudo']));
