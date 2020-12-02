@@ -132,8 +132,8 @@ $recupVote = $sonda->catchVotes($bdd,$reponseEnTout);
                     </div>
                     <div id="envoyerMessage">
                         <form action="#" method='post'>
-                            <input type="text" placeholder="Message ..." name='message'>
-                            <input type="submit" value='->' name='envoyerMsg'>
+                            <input type="text" placeholder="Message ..." name='message' id='contentMsg'>
+                            <input type="submit" value='✔' name='envoyerMsg' id='msgChat'>
                         </form>
                     </div>
                 </div>
@@ -168,6 +168,8 @@ $recupVote = $sonda->catchVotes($bdd,$reponseEnTout);
         </section>
     <?php } ?>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='../js/main.js'></script>
 </body>
 
 </html>
