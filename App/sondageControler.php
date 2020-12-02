@@ -15,7 +15,14 @@ class SondageControler
         $TitreQ =  $bdd->prepare('SELECT sond_question, sond_enCours FROM sondage WHERE sond_lien=:lienTitre');
         $TitreQ->execute(array('lienTitre' => $_GET['lien']));
         $recupTitreQ = $TitreQ->fetch();
-        return $TitreQ;
+        return $recupTitreQ;
+    }
+
+    public function repName($bdd)
+    {
+        $reponse =  $bdd->prepare('SELECT rep_name FROM reponses WHERE rep_sondage_id=:lien');
+        $reponse->execute(array('lien' => $_GET['lien']));
+        return $reponse;
     }
 
     public function answer($bdd)
@@ -53,7 +60,7 @@ class SondageControler
                 $verif = true;
             }
         }
-        return $verifPart;
+        return $verif;
     }
 
     public function sendQ($bdd)
@@ -66,14 +73,14 @@ class SondageControler
         return $participation;
     }
 
-    public function catchVotes($bdd,$reponseEnTout)
+    public function catchVotes($bdd, $reponseEnTout)
     {
         $recupVote = $bdd->prepare('SELECT part_name, part_reponse FROM participant WHERE part_sondage_id = :sondageid');
         $recupVote->execute(array('sondageid' => $_GET['lien']));
 
         foreach ($recupVote as $recupVotes) {
-            $recupVotes = $recupVotes + 1;
+            $reponseEnTout = $reponseEnTout + 1;
         }
-        return $recupVotes;
+        return $reponseEnTout;
     }
 }

@@ -18,7 +18,7 @@ if (isset($_POST['deco'])) {
 
 use App\SondageControler;
 $sonda = new SondageControler($bdd);
-$TitreQ = $sonda->titleQ($bdd);
+$recupTitreQ = $sonda->titleQ($bdd);
 
 // $TitreQ =  $bdd->prepare('SELECT sond_question, sond_enCours FROM sondage WHERE sond_lien=:lienTitre');
 // $TitreQ->execute(array('lienTitre' => $_GET['lien']));
@@ -26,7 +26,7 @@ $TitreQ = $sonda->titleQ($bdd);
 
 // Récupération des reponses depuis la bdd --------------------------------------------------------------------
 
-$reponse = $sonda->titleQ($bdd);
+$reponse = $sonda->repName($bdd);
 // $reponse =  $bdd->prepare('SELECT rep_name FROM reponses WHERE rep_sondage_id=:lien');
 // $reponse->execute(array('lien' => $_GET['lien']));
 
@@ -48,7 +48,7 @@ $chatAff = $sonda->chatView($bdd);
 
 // Verifie que l'on a pas deja participer ------------------------------------------------------------------
 
-$chatAff = $sonda->hasChosen($bdd);
+$verif = $sonda->hasChosen($bdd);
 // $verifPart = $bdd->prepare('SELECT part_name, part_sondage_id FROM participant WHERE part_name = :pseudo AND part_sondage_id = :liensondage');
 // if (isset($_SESSION['pseudo'])) {
 //     $verifPart->execute(array('pseudo' => $_SESSION['pseudo'], 'liensondage' => $_GET['lien']));
