@@ -2,10 +2,7 @@
 include "coBdd.php";
 // Bouton Deconnexion ------------------------------------------------------------------------------------------
 
-if (isset($_POST['deco'])) {
-    session_destroy();
-    header('location:index.php');
-}
+include "../App/deconnexion.php";
 
 // Affichage de mes sondages en cours --------------------------------------------------------------------------------------
 
