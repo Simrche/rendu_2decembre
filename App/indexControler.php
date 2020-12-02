@@ -5,7 +5,7 @@ namespace App;
 class IndexControler
 {
 
-    public function __construct($bdd)
+    public function __construct()
     {
     }
 

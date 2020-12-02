@@ -6,6 +6,7 @@ include "../App/deconnexion.php";
 
 // Affichage de mes sondages en cours --------------------------------------------------------------------------------------
 use App\IndexControler;
+
 $indeContr = new IndexControler($bdd);
 $sondageEnCours = $indeContr->sondNow($bdd);
 

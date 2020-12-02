@@ -3,6 +3,7 @@ include "coBdd.php";
 // Ajout de tournoi dans la bdd --------------------------------------------------------------
 
 use App\CreaSondController;
+
 $newSond = new CreaSondController($bdd);
 $newSond->creaNewSond($bdd);
 

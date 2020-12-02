@@ -2,6 +2,7 @@
 include "coBdd.php";
 
 use App\ConnController;
+
 $Conn = new ConnController($bdd);
 $isCo = $Conn->isConnected($bdd);
 

@@ -2,6 +2,7 @@
 include "coBdd.php";
 
 use App\InscriController;
+
 $Sign = new InscriController($bdd);
 $SignIn = $Sign->isSignIn($bdd);
 

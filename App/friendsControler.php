@@ -5,7 +5,7 @@ namespace App;
 class FriendsControler
 {
 
-    public function __construct($bdd)
+    public function __construct()
     {
     }
 
@@ -20,7 +20,7 @@ class FriendsControler
         }
         return $allUser;
     }
-    
+
     public function myFriends($bdd)
     {
         $allFriend = $bdd->prepare('SELECT amis_users_id2, amis_id FROM listeamis WHERE amis_users_id = :pseudo ORDER BY amis_users_id2 ASC');

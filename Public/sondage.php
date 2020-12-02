@@ -8,6 +8,7 @@ include "../App/deconnexion.php";
 
 // Récupération du titre depuis la bdd --------------------------------------------------------------------
 use App\SondageControler;
+
 $sonda = new SondageControler($bdd);
 $recupTitreQ = $sonda->titleQ($bdd);
 
@@ -29,7 +30,7 @@ $verif = $sonda->hasChosen($bdd);
 $participation = $sonda->sendQ($bdd);
 
 // Récupération des votes -----------------------------------------------------------------------------------
-$recupVote = $sonda->catchVotes($bdd,$reponseEnTout);
+$recupVote = $sonda->catchVotes($bdd, $reponseEnTout);
 
 ?>
 

@@ -5,6 +5,7 @@ include "../App/deconnexion.php";
 
 // Récupération de tout les utilisateurs --------------------------------------------------------------------
 use App\FriendsControler;
+
 $friend = new FriendsControler($bdd);
 $allUser = $friend->getUsers($bdd);
 
