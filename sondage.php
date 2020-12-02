@@ -101,7 +101,7 @@
                         <?php 
                             foreach($reponse as $reponses) { 
                                 if($verif == false && $recupTitreQ['sond_enCours']) {?>
-                                    <input type="submit" value='<?= $reponses['rep_name'] ?>' class='reponsesSondage' name='reponses'>
+                                    <input type="submit" value="<?= $reponses['rep_name'] ?>" class='reponsesSondage' name='reponses'>
                                 <?php } else { ?>
                                     <div class='reponsesSondageFini'><p><?= $reponses['rep_name'] ?></p></div>
                                <?php } ?>

@@ -3,7 +3,7 @@
     include "codes.php";
     $bdd = new PDO("mysql:host=localhost;dbname=exo_sondage;charset=utf8", $indivRoots, $indivMdp);
 
-    // Bouton Deconnexion ------------------------------------------------------------------------------------------
+    // Bouton Deconnexion -----------------------------------------------------------------------------------------------------
 
     if(isset($_POST['deco'])) {
         session_destroy();
