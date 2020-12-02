@@ -10,7 +10,7 @@ if (isset($_POST['deco'])) {
 // Affichage de mes sondages en cours --------------------------------------------------------------------------------------
 
 use App\IndexControler;
-use App\CoBdd;
+use App\CoBdd
 
 
 $bdd = new IndexControler();
