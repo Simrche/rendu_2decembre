@@ -2,7 +2,7 @@
 
 namespace App;
 
-use CoBdd;
+use App\CoBdd;
 
 
 
