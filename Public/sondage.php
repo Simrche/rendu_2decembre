@@ -1,11 +1,6 @@
 <?php
 include "coBdd.php";
-$verif = false;
 $reponseEnTout = 0;
-$reponse1;
-$reponse2;
-$reponse3;
-$reponse4;
 
 // Bouton Deconnexion ------------------------------------------------------------------------------------------
 

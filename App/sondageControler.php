@@ -52,6 +52,7 @@ class SondageControler
 
     public function hasChosen($bdd)
     {
+        $verif=false;
         $verifPart = $bdd->prepare('SELECT part_name, part_sondage_id FROM participant WHERE part_name = :pseudo AND part_sondage_id = :liensondage');
         if (isset($_SESSION['pseudo'])) {
             $verifPart->execute(array('pseudo' => $_SESSION['pseudo'], 'liensondage' => $_GET['lien']));
