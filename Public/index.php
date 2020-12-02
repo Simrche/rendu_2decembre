@@ -9,10 +9,13 @@ if (isset($_POST['deco'])) {
 
 // Affichage de mes sondages en cours --------------------------------------------------------------------------------------
 
-$sondageEnCours =  $bdd->prepare('SELECT sond_question, sond_lien FROM sondage WHERE sond_createur=:pseudo AND sond_enCours = 1');
-if (isset($_SESSION['pseudo'])) {
-    $sondageEnCours->execute(array('pseudo' => $_SESSION['pseudo']));
-}
+use App\IndexControler;
+$indeContr = new IndexControler($bdd);
+$sondageEnCours = $indeContr->sondNow($bdd);
+// $sondageEnCours =  $bdd->prepare('SELECT sond_question, sond_lien FROM sondage WHERE sond_createur=:pseudo AND sond_enCours = 1');
+// if (isset($_SESSION['pseudo'])) {
+//     $sondageEnCours->execute(array('pseudo' => $_SESSION['pseudo']));
+// }
 
 
 // Affichage de mes sondages finis --------------------------------------------------------------------------------------
