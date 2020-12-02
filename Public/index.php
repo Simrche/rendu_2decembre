@@ -5,36 +5,26 @@ include "coBdd.php";
 include "../App/deconnexion.php";
 
 // Affichage de mes sondages en cours --------------------------------------------------------------------------------------
-
 use App\IndexControler;
 $indeContr = new IndexControler($bdd);
 $sondageEnCours = $indeContr->sondNow($bdd);
-// $sondageEnCours =  $bdd->prepare('SELECT sond_question, sond_lien FROM sondage WHERE sond_createur=:pseudo AND sond_enCours = 1');
-// if (isset($_SESSION['pseudo'])) {
-//     $sondageEnCours->execute(array('pseudo' => $_SESSION['pseudo']));
-// }
-
 
 // Affichage de mes sondages finis --------------------------------------------------------------------------------------
-
 $sondageFini = $bdd->prepare('SELECT sond_question, sond_lien FROM sondage WHERE sond_createur=:pseudo AND sond_enCours = 0');
 if (isset($_SESSION['pseudo'])) {
     $sondageFini->execute(array('pseudo' => $_SESSION['pseudo']));
 }
 
 // Affichage de mes amis -------------------------------------------------------------------------------------------------
-
 $amisEnLigne = $bdd->prepare('SELECT amis_users_id2 FROM listeamis WHERE amis_users_id = :pseudo');
 if (isset($_SESSION['pseudo'])) {
     $amisEnLigne->execute(array('pseudo' => $_SESSION['pseudo']));
 }
 
 // Afficher tous les sondages -------------------------------------------------------------------------------------------------
-
 $recupSondage = $bdd->query('SELECT sond_id, sond_question, sond_lien, sond_createur, sond_debut, sond_time FROM sondage');
 
 // Verification que les sondages ne sont pas fini -----------------------------------------------------------------------------
-
 $recupVerifFinSondage = $bdd->query('SELECT sond_id, sond_question, sond_lien, sond_createur, sond_debut, sond_time FROM sondage');
 $finSondage = $bdd->prepare('UPDATE sondage SET sond_enCours = 0 WHERE id = :sondage');
 foreach ($recupVerifFinSondage as $finito) {

@@ -1,5 +1,7 @@
 Cameron LORMONT, Simont ROCHE, Théodore CADET
 
+**il faut faire suivre les instruction dans templates/codesTemplates.php pour pouvouvoir se connecter à sa BDD**
+
 Par équipe de 3 vous allez devoir monter le projet suivant:
 
 Date de rendu: 25 novembre
